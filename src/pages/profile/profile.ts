@@ -27,9 +27,8 @@ export class ProfilePage {
     if(localUser && localUser.email){
      this.clienteService.findByEmail(localUser.email)
      .subscribe(response => {
-       this.cliente = response;
-       this.getImageIfExists();
-       //buscar imagem
+       this.cliente = response as ClienteDTO;
+       this.getImageIfExists();       
      }, error => {
        if(error.status == 403){
          this.navCtrl.setRoot('HomePage');
