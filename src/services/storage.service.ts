@@ -1,6 +1,5 @@
 import { LocalUser } from "../models/local_user";
 import { STORAGE_KEYS } from "../config/store_keys.config";
-import { jsonpCallbackContext } from "@angular/common/http/src/module";
 import { Cart } from "../models/cart";
 
 export class StorageService{
